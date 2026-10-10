@@ -1,0 +1,672 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+:root {
+  color-scheme: dark;
+  --bg: #0b0e13;
+  --panel: #121821;
+  --text: #f0f2f6;
+  --muted: #929dab;
+  --line: #27313d;
+  --accent: #b5f47b;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.7;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+.wrap {
+  max-width: 1180px;
+  margin: auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.glow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55vw;
+  height: 700px;
+  background: radial-gradient(ellipse at 80% 0%, #b5f47b10, transparent 65%);
+  pointer-events: none;
+}
+.nav {
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+}
+.brand {
+  font: 700 30px "Space Grotesk";
+}
+.brand span,
+.accent {
+  color: var(--accent);
+}
+nav {
+  display: flex;
+  gap: 32px;
+}
+nav a,
+.nav-cta {
+  font-size: 13px;
+  color: #b7c0ca;
+}
+nav a:hover,
+.nav-cta:hover,
+.text-link:hover {
+  color: var(--accent);
+}
+.nav-cta {
+  border: 1px solid #53604e;
+  padding: 10px 18px;
+  border-radius: 5px;
+}
+.hero {
+  position: relative;
+  min-height: 690px;
+  padding-top: 108px;
+  padding-bottom: 130px;
+}
+.eyebrow,
+.section-kicker,
+.project-top,
+.time {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--accent);
+}
+.dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
+  border-radius: 50%;
+  margin-right: 8px;
+  box-shadow: 0 0 16px var(--accent);
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.055em;
+}
+h1 {
+  font-size: clamp(52px, 6.5vw, 94px);
+  line-height: 1.07;
+  margin: 28px 0;
+  max-width: 850px;
+}
+h1 em,
+.contact h2 em {
+  font-style: normal;
+  color: var(--accent);
+}
+.lead {
+  max-width: 630px;
+  color: var(--muted);
+  font-size: 17px;
+}
+.lead strong {
+  color: var(--text);
+  font-weight: 500;
+}
+.actions {
+  display: flex;
+  gap: 12px;
+  margin: 32px 0 55px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  padding: 13px 22px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.primary {
+  background: var(--accent);
+  color: #0b1107;
+}
+.primary:hover {
+  background: #d2ffad;
+}
+.secondary {
+  border: 1px solid #3a4653;
+}
+.secondary:hover {
+  border-color: var(--accent);
+}
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  color: #7e8a97;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+.hero-meta span:before {
+  content: "✳";
+  color: var(--accent);
+  margin-right: 9px;
+}
+.hero-art {
+  position: absolute;
+  right: 32px;
+  bottom: 70px;
+  width: 330px;
+  background: #121a22;
+  border: 1px solid #35404a;
+  border-radius: 9px;
+  box-shadow: 0 20px 80px #0008;
+  transform: rotate(3deg);
+  opacity: 0.9;
+}
+.window-top {
+  height: 34px;
+  border-bottom: 1px solid #303943;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 14px;
+}
+.window-top i {
+  height: 7px;
+  width: 7px;
+  background: #485463;
+  border-radius: 50%;
+}
+.window-top span {
+  margin-left: 14px;
+  color: #82909f;
+  font-size: 10px;
+}
+.hero-art pre {
+  font-size: 11px;
+  line-height: 2;
+  padding: 16px 20px;
+  color: #c5d2df;
+}
+.purple {
+  color: #b7a6ff;
+}
+.green {
+  color: var(--accent);
+}
+.section {
+  padding-top: 108px;
+  padding-bottom: 108px;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 30px;
+}
+.section-kicker {
+  margin-bottom: 24px;
+}
+.section h2 {
+  font-size: clamp(38px, 4.7vw, 62px);
+  line-height: 1.14;
+  margin-bottom: 42px;
+}
+.section h2 span {
+  color: #85919e;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+.two-col p {
+  color: var(--muted);
+}
+.text-link {
+  display: inline-block;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 13px;
+  margin-top: 12px;
+}
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: end;
+}
+.section-head p {
+  max-width: 290px;
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 50px;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.project {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  overflow: hidden;
+  transition:
+    transform 0.25s,
+    border-color 0.25s;
+}
+.project:hover {
+  transform: translateY(-5px);
+  border-color: #7b9a62;
+}
+.project.featured {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+}
+.project-visual {
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.featured .project-visual {
+  min-height: 340px;
+}
+.visual-one {
+  background: linear-gradient(135deg, #344c42, #8c9f7e);
+}
+.visual-two {
+  background: radial-gradient(circle at 80% 20%, #5a426e, #231d35 70%);
+}
+.visual-three {
+  background: linear-gradient(145deg, #153f48, #1e7371);
+}
+.visual-four {
+  background: linear-gradient(145deg, #1d3b5d, #0c1726);
+}
+.visual-five {
+  background: linear-gradient(145deg, #313944, #121820);
+}
+.visual-six {
+  background: linear-gradient(145deg, #564338, #1e1b1b);
+}
+.visual-seven {
+  background: linear-gradient(145deg, #4b315c, #191328);
+}
+.visual-word {
+  font: 700 clamp(38px, 5vw, 70px) "Space Grotesk";
+  letter-spacing: -4px;
+}
+.serif {
+  font-family: Georgia, serif;
+  letter-spacing: -2px;
+  font-weight: 400;
+}
+.project-visual small {
+  letter-spacing: 3px;
+  font-size: 10px;
+  color: #ffffff9c;
+}
+.mock-browser {
+  width: 78%;
+  height: 235px;
+  background: #f1f0e9;
+  color: #25342c;
+  border-radius: 8px 8px 0 0;
+  padding: 20px 25px;
+  transform: translateY(28px) rotate(-3deg);
+  box-shadow: 0 15px 60px #0004;
+}
+.mock-nav {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.mock-nav span {
+  float: right;
+  font-size: 7px;
+  letter-spacing: 1px;
+}
+.mock-title {
+  font:
+    500 37px/1.1 Georgia,
+    serif;
+  margin-top: 37px;
+}
+.mock-pill {
+  background: #283e30;
+  color: #fff;
+  display: inline-block;
+  padding: 6px 14px;
+  margin-top: 15px;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+.project-copy {
+  padding: 28px 30px;
+}
+.featured .project-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.project-top {
+  display: flex;
+  justify-content: space-between;
+  color: #9ca8b5;
+  letter-spacing: 1.4px;
+}
+.project-top span:last-child {
+  font-size: 22px;
+  color: var(--accent);
+}
+.project h3 {
+  font-size: 30px;
+  margin: 12px 0;
+}
+.project p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 20px;
+}
+.tags span {
+  border: 1px solid #3a4652;
+  color: #b9c3cc;
+  border-radius: 3px;
+  padding: 4px 9px;
+  font-size: 10px;
+}
+.timeline article {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 25px;
+  padding: 34px 0;
+  border-top: 1px solid var(--line);
+}
+.timeline article:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.time {
+  color: #8996a4;
+  padding-top: 8px;
+}
+.timeline h3 {
+  font-size: 25px;
+  margin-bottom: 0;
+}
+.company {
+  color: var(--accent);
+  font-size: 13px;
+  margin: 5px 0 14px;
+}
+.timeline p {
+  color: var(--muted);
+  font-size: 14px;
+  max-width: 720px;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.skill-box {
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #10151d;
+}
+.skill-box h3 {
+  font-size: 18px;
+  letter-spacing: -0.02em;
+}
+.skill-box p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+.contact {
+  text-align: center;
+  padding-top: 125px;
+  padding-bottom: 135px;
+}
+.contact h2 {
+  font-size: clamp(55px, 8vw, 100px);
+  margin-bottom: 20px;
+}
+.contact p {
+  color: var(--muted);
+}
+.big-email {
+  display: inline-block;
+  font: 500 clamp(20px, 3vw, 34px) "Space Grotesk";
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 7px;
+  margin: 24px 0;
+}
+.big-email:hover {
+  color: var(--accent);
+}
+.contact-links {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  font-size: 13px;
+  color: #b7c3ce;
+}
+footer {
+  border-top: 1px solid var(--line);
+  padding-top: 26px !important;
+  padding-bottom: 28px !important;
+  display: flex;
+  justify-content: space-between;
+  color: #82909d;
+  font-size: 12px;
+}
+@media (max-width: 900px) {
+  .hero-art {
+    display: none;
+  }
+  .hero {
+    min-height: 610px;
+  }
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 650px) {
+  .wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .nav {
+    height: 75px;
+  }
+  nav {
+    gap: 12px;
+  }
+  nav a {
+    font-size: 11px;
+  }
+  .nav-cta {
+    display: none;
+  }
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 90px;
+    min-height: unset;
+  }
+  .hero-meta {
+    gap: 12px;
+  }
+  .two-col,
+  .project.featured,
+  .timeline article {
+    grid-template-columns: 1fr;
+  }
+  .project.featured {
+    display: block;
+    grid-column: auto;
+  }
+  .project-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .section {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+  .section-head {
+    display: block;
+  }
+  .section-head p {
+    margin-top: -20px;
+    margin-bottom: 32px;
+  }
+  .timeline article {
+    gap: 8px;
+  }
+  .project-visual,
+  .featured .project-visual {
+    min-height: 220px;
+  }
+  .mock-browser {
+    height: 190px;
+  }
+  .mock-title {
+    font-size: 30px;
+  }
+  .contact {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+  footer {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .section,
+  .project {
+    opacity: 0;
+    translate: 0 18px;
+    transition:
+      opacity 0.6s ease,
+      translate 0.6s ease,
+      transform 0.25s,
+      border-color 0.25s;
+  }
+  .section.in-view,
+  .project.in-view {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+/* Official site favicons used as project marks; text remains as accessible fallback. */
+.project-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  text-align: center;
+}
+.project-logo img {
+  display: block;
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 12px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+.project-logo .logo-label {
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  font-weight: 750;
+  letter-spacing: -0.04em;
+  color: #fff;
+}
+.project-logo img:not([src]) {
+  display: none;
+}
+.project.featured .project-logo img {
+  width: 120px;
+  height: 120px;
+}
+
+/* Actual website screenshots provided by the portfolio owner. */
+.project-visual {
+  background: #18202a;
+  display: block;
+  min-height: 0;
+  aspect-ratio: 16/10;
+}
+.project.featured .project-visual {
+  min-height: 0;
+  aspect-ratio: 16/10;
+}
+.project-screenshot {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s ease;
+}
+.project:hover .project-screenshot {
+  transform: scale(1.045);
+}
+@media (max-width: 650px) {
+  .project-visual,
+  .project.featured .project-visual {
+    min-height: 0;
+  }
+}
+
+/* Taller, native-resolution project screenshots; Snicosh keeps its original presentation. */
+.project:not(.featured) .project-visual {
+  aspect-ratio: 4/3;
+}
+.project:not(.featured) .project-screenshot {
+  object-fit: cover;
+  object-position: top center;
+}
